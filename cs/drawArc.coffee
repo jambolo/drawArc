@@ -1,3 +1,9 @@
+debug = 
+  C:
+    x: 0
+    y: 0
+  Q: 0
+
 computeQ = (x1, y1, x2, y2, radius) ->
   P1 = { x: x1, y: y1 }
   P2 = { x: x2, y: y2 }
@@ -30,6 +36,8 @@ computeQ = (x1, y1, x2, y2, radius) ->
     x: M.x + uMC.x * dCM
     y: M.y + uMC.y * dCM
 
+  debug.C = C
+
   # Determine the distance from C to Q
   dCQ = radius * radius / dCM
 
@@ -38,6 +46,8 @@ computeQ = (x1, y1, x2, y2, radius) ->
     x: C.x - uMC.x * dCQ
     y: C.y - uMC.y * dCQ
 
+  debug.Q = Q
+  
   return Q
 
 # Given two points and a radius, determine the first parameter of the arcTo function and draw an arc from the

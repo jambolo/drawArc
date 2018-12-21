@@ -20,6 +20,8 @@ init = ->
   r = Math.min(canvas.width, canvas.height) / 4
   n = 8
 
+  arcFactor = 0.4
+
   for i in [0..n]
     P1 =
       x: C.x+Math.cos(twoPi/n * i) * r
@@ -29,8 +31,30 @@ init = ->
       y: C.y+Math.sin(twoPi/n * (i+1)) * r
 
     ctx.beginPath()
+    ctx.strokeStyle = 'black'
+    drawArc(ctx, P1.x, P1.y, P2.x, P2.y, r*arcFactor)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.strokeStyle = 'blue'
+    ctx.moveTo(P1.x, P1.y)
+    ctx.lineTo(debug.C.x, debug.C.y)
+    ctx.lineTo(P2.x, P2.y)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.strokeStyle = 'green'
+    ctx.moveTo(P1.x, P1.y)
+    ctx.lineTo(debug.Q.x, debug.Q.y)
+    ctx.lineTo(P2.x, P2.y)
+    ctx.stroke()
+
+    ctx.beginPath()
     ctx.strokeStyle = 'red'
-    drawArc(ctx, P1.x, P1.y, P2.x, P2.y, r*2)
+    ctx.moveTo(debug.C.x, debug.C.y)
+    ctx.lineTo(debug.Q.x, debug.Q.y)
+    ctx.moveTo(P1.x, P1.y)
+    ctx.lineTo(P2.x, P2.y)
     ctx.stroke()
 
 window.addEventListener('load', (e) ->
