@@ -1,6 +1,6 @@
 {
-  "name": "arcto",
-  "version": "0.0.1",
+  "name": "drawArc",
+  "version": "1.0.0",
   "description": "Computes the first parameter of the canvas arcTo function given a radius",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jambolo/arcTo.git"
+    "url": "git+https://github.com/jambolo/drawArc.git"
   },
   "keywords": [
     "arcTo"
@@ -18,7 +18,7 @@
   "author": "John Bolton",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jambolo/arcTo/issues"
+    "url": "https://github.com/jambolo/drawArc/issues"
   },
-  "homepage": "https://github.com/jambolo/arcTo#readme"
+  "homepage": "https://github.com/jambolo/drawArc#readme"
 }
