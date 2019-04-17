@@ -1,10 +1,10 @@
 debug =
-    C:
-      x: 0
-      y: 0
-    Q:
-      x: 0
-      y: 0
+  C:
+    x: 0
+    y: 0
+  Q: 
+    x: 0
+    y: 0
 
 computeQ = (x1, y1, x2, y2, radius) ->
   P1 = { x: x1, y: y1 }
@@ -52,7 +52,9 @@ computeQ = (x1, y1, x2, y2, radius) ->
 # Given two points and a radius, determine the first parameter of the arcTo function and draw an arc from the
 # first point to the second point
 drawArc = (ctx, x1, y1, x2, y2, radius) ->
-  Q = computeQ(x1, y1, x2, y2, radius)
   ctx.moveTo(x1, y1)
+  Q = computeQ(x1, y1, x2, y2, radius)
   ctx.arcTo(Q.x, Q.y, x2, y2, radius)
-  return
+  return debug
+
+export default drawArc

@@ -1,24 +1,47 @@
 {
-  "name": "drawArc",
-  "version": "1.0.0",
+  "name": "draw-arc",
+  "version": "1.1.0",
   "description": "Computes the first parameter of the canvas arcTo function given a radius",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/lab": "^3.0.0-alpha.30",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8"
+  },
   "main": "index.js",
   "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "eject": "react-scripts eject",
     "compile": "coffee -c -o src/ -b cs/",
-    "watch": "coffee -c -o src/ -b -w cs/"
+    "watch": "coffee -c -o src/ -b -w cs/",
+    "dev": "yarn start & yarn watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jambolo/drawArc.git"
   },
   "keywords": [
-    "arcTo"
+    "arcTo",
+    "html",
+    "canvas"
   ],
   "author": "John Bolton",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jambolo/drawArc/issues"
   },
-  "homepage": "https://github.com/jambolo/drawArc#readme"
+  "homepage": "https://github.com/jambolo/drawArc#readme",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
