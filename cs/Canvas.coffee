@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 class Canvas extends Component
   componentDidMount: ->
-    @update(0)
+    @update(50)
 
   componentDidUpdate: ->
     { value } = @props

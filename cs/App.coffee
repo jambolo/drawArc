@@ -1,5 +1,6 @@
 `
-import MainView from './MainView'
+import './App.css';
+import MainView from './MainView';
 import React, { Component } from 'react';
 `
 
@@ -7,7 +8,7 @@ class App extends Component
   constructor: (props) ->
     super(props)
     @state =
-      value: 0
+      value: 50
     return
 
   onValue: (v) =>
@@ -19,4 +20,3 @@ class App extends Component
     </div>
 
 export default App
- 
