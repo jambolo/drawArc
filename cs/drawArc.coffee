@@ -2,7 +2,7 @@ debug =
   C:
     x: 0
     y: 0
-  Q: 
+  Q:
     x: 0
     y: 0
 
@@ -40,7 +40,7 @@ computeQ = (x1, y1, x2, y2, radius) ->
   Q =
     x: M.x + uMQ.x * dMQ
     y: M.y + uMQ.y * dMQ
- 
+
   debug =
     C:
       x: M.x - uMQ.x * dCM
